@@ -16,7 +16,7 @@ namespace MovieApi.Application.Features.CQRSDesingPattem.Handlers.MovieHandkers
         {
             _context = context;
         }
-        public async void Handlers(UpdateMovieCommand command)
+        public async Task Handle(UpdateMovieCommand command)
         {
             var value = await _context.Movies.FindAsync(command.MovieId);
             value.Rating = command.Rating;

@@ -18,7 +18,7 @@ namespace MovieApi.Application.Features.CQRSDesingPattem.Handlers.MovieHandkers
         {
             _context = context;
         }
-        public async void Handlers(CreateMovieCommand command)
+        public async Task Handle(CreateMovieCommand command)
         {
             _context.Movies.Add(new Movie
             {
